@@ -1,0 +1,177 @@
+﻿<Window x:Class="PLWPF.AdminWindow1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF"
+        mc:Ignorable="d"
+      Title="AdminWindow1" Height="450" Width="1000">
+
+    <Grid>
+        <TabControl  Margin="0,0,-0.4,0">
+            <TabControl.Items>
+                <TabItem Header="Trainees">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="77*"/>
+                            <ColumnDefinition Width="13*"/>
+                            <ColumnDefinition Width="162*"/>
+                            <ColumnDefinition Width="79*"/>
+                            <ColumnDefinition Width="330*"/>
+                            <ColumnDefinition Width="330*"/>
+                        </Grid.ColumnDefinitions>
+                        <WrapPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6">
+                            <Button x:Name="AddTrainee"   Content="Add"    Click="AddTrainee_Click" Width="80" Height="80"  Style="{DynamicResource MahApps.Metro.Styles.MetroCircleButtonStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                            <Button x:Name="GroupByNumTestTrainee"  Width="80" Height="80"  Style="{DynamicResource MahApps.Metro.Styles.MetroCircleButtonStyle}" Content="Group By&#xA;NumTest" HorizontalAlignment="Left"  Click="GroupByNumTestTrainee_Click"  VerticalAlignment="Top"  />
+                            <Button x:Name="GroupByTeacherOfTrainee" Width="80" Height="80"  Style="{DynamicResource MahApps.Metro.Styles.MetroCircleButtonStyle}" Content="Group By&#xA; Teacher" HorizontalAlignment="Left"  VerticalAlignment="Top"   Click="GroupByTeacherOfTrainee_Click"  IsDefault="True"/>
+                            <Button x:Name="GroupBySchoolTrainee"  Width="80" Height="80"  Style="{DynamicResource MahApps.Metro.Styles.MetroCircleButtonStyle}" Content="Group By&#xA;  School" HorizontalAlignment="Left"  VerticalAlignment="Top"   Click="GroupBySchoolTrainee_Click" />
+                            <Button x:Name="Delete_all_trainee"   Content="Delete All&#xA; Trainees"  Width="80" Height="80"  Style="{DynamicResource MahApps.Metro.Styles.MetroCircleButtonStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Delete_all_trainee_Click" />
+                        </WrapPanel>
+                        <DataGrid x:Name="TraineeDataGrid" AutoGenerateColumns="False" IsReadOnly="True" Margin="0,10.4,0.4,120.8"  Grid.Row="1" Grid.ColumnSpan="6" Grid.Column="0" ItemsSource="{Binding Path=Albums}" >
+                            <DataGrid.Columns>
+                                <DataGridTemplateColumn  >
+                                    <DataGridTemplateColumn.CellTemplate >
+                                        <DataTemplate>
+                                            <Button Style="{DynamicResource AccentedSquareButtonStyle}" Click="UpdateTrainee_Click">Update</Button>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn  >
+                                    <DataGridTemplateColumn.CellTemplate  >
+                                        <DataTemplate>
+                                            <Button Style="{StaticResource AccentedSquareButtonStyle}" Click="DeleteTrainee_Click">Delete</Button>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTextColumn Header="ID" Binding="{Binding ID}"  />
+                                <DataGridTextColumn Header="first name" Binding="{Binding FName}"  />
+                                <DataGridTextColumn Header="last name" Binding="{Binding LName}"  />
+                                <DataGridTextColumn Header="LessonNum" Binding="{Binding LessonNum}"  />
+                                <DataGridTextColumn Header="School" Binding="{Binding School}"  />
+                                <DataGridTextColumn Header="Teacher" Binding="{Binding Teacher}"  />
+                                <DataGridTextColumn Header="City" Binding="{Binding MyAddress.City}"  />
+                                <DataGridTextColumn Header="Street" Binding="{Binding MyAddress.Street}"  />
+                                <DataGridTextColumn Header="Number of building" Binding="{Binding MyAddress.NBuilding}"  />
+                                <DataGridTextColumn Header="BDate" Binding="{Binding BDate,StringFormat='dd/MM/yyyy' }"  />
+                                <DataGridTextColumn Header="Phone" Binding="{Binding Phone}"  />
+                                <DataGridTextColumn Header="Gear" Binding="{Binding Gear}" />
+                                <DataGridTextColumn Header="CarType" Binding="{Binding CarType}"  />
+                                <DataGridTextColumn Header="Gender" Binding="{Binding Gender}" />
+                                <DataGridTextColumn Header="LastTest" Binding="{Binding LastTest}"  />
+                                <DataGridCheckBoxColumn  Header="HaveGlasses" Binding="{Binding HaveGlasses}"  />
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Testers">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="122*"/>
+                            <ColumnDefinition Width="207*"/>
+                            <ColumnDefinition Width="328*"/>
+                            <ColumnDefinition Width="329*"/>
+                        </Grid.ColumnDefinitions>
+                        <WrapPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4">
+                            <Button x:Name="AddTester"  Width="80" Height="80"  Style="{DynamicResource MahApps.Metro.Styles.MetroCircleButtonStyle}"   Content="Add"    Click="AddTester_Click" />
+                            <Button Content="Group By&#xa; CarType"  Width="80" Height="80"  Style="{DynamicResource MahApps.Metro.Styles.MetroCircleButtonStyle}"   Click="GroupByCarType_Click" />
+                            <Button x:Name="Delete_all_testers"   Content="Delete All&#xA;  Testers"  Width="80" Height="80"  Style="{DynamicResource MahApps.Metro.Styles.MetroCircleButtonStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Delete_all_testers_Click" />
+                        </WrapPanel>
+                        <DataGrid x:Name="TesterDataGrid" AutoGenerateColumns="False" IsReadOnly="True" Grid.Row="1" Margin="0,10,0,45" Grid.ColumnSpan="4" Grid.Column="0" >
+                            <DataGrid.Columns>
+                                <DataGridTemplateColumn  >
+                                    <DataGridTemplateColumn.CellTemplate >
+                                        <DataTemplate>
+                                            <Button  Style="{StaticResource AccentedSquareButtonStyle}" Click="UpdateTester_Click">Update</Button>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn  >
+                                    <DataGridTemplateColumn.CellTemplate  >
+                                        <DataTemplate>
+                                            <Button  Style="{StaticResource AccentedSquareButtonStyle}" Click="DeleteTester_Click">Delete</Button>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTextColumn Header="ID" Binding="{Binding ID}"  />
+                                <DataGridTextColumn Header="first name" Binding="{Binding FName}"  />
+                                <DataGridTextColumn Header="last name" Binding="{Binding LName}"  />
+                                <DataGridTextColumn Header="Phone" Binding="{Binding Phone}"  />
+                                <DataGridTextColumn Header="Seniority" Binding="{Binding Seniority}"  />
+                                <DataGridTextColumn Header="Distancefromaddres" Binding="{Binding Distancefromaddres}"  />
+                                <DataGridTextColumn Header="MaxD" Binding="{Binding MaxD}"  />
+                                <DataGridTextColumn Header="City" Binding="{Binding MyAddress.City}"  />
+                                <DataGridTextColumn Header="Street" Binding="{Binding MyAddress.Street}"  />
+                                <DataGridTextColumn Header="Number of building" Binding="{Binding MyAddress.NBuilding}"  />
+                                <DataGridTextColumn Header="BDate" Binding="{Binding BDate,StringFormat='dd/MM/yyyy' }"  />
+                                <DataGridTextColumn Header="Phone" Binding="{Binding Phone}"  />
+                                <DataGridTextColumn Header="MaxTest" Binding="{Binding MaxTest}"  />
+                                <DataGridTextColumn Header="Tests" Binding="{Binding Tests}"  />
+                                <DataGridTextColumn Header="CarType" Binding="{Binding CarType}"  />
+                                <DataGridTextColumn Header="Gender" Binding="{Binding Gender}"  />
+                                <DataGridTextColumn Header="Sched" Binding="{Binding }"  />
+                            </DataGrid.Columns>
+                        </DataGrid>
+
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Tests">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="133*"/>
+                            <ColumnDefinition Width="197*"/>
+                            <ColumnDefinition Width="330*"/>
+                            <ColumnDefinition Width="330*"/>
+                        </Grid.ColumnDefinitions>
+                        <WrapPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4">
+                            <Button x:Name="AddTest" Content="Add"  Click="AddTest_Click" Width="80" Height="80"  Style="{DynamicResource MahApps.Metro.Styles.MetroCircleButtonStyle}"   />
+                            <Button x:Name="Succsess" Content="Success Test" Width="80" Height="80"  Style="{DynamicResource MahApps.Metro.Styles.MetroCircleButtonStyle}" Click="Succsess_Click"   />
+                            <Button x:Name="NotPass" Content="Not Pass Test" Width="80" Height="80"  Style="{DynamicResource MahApps.Metro.Styles.MetroCircleButtonStyle}" Click="NotPass_Click"   />
+                        </WrapPanel>
+                        <DataGrid x:Name="TestDataGrid" AutoGenerateColumns="False" IsReadOnly="True" Margin="0,13,-0.4,116.6" Grid.Row="1" Grid.ColumnSpan="4" Grid.Column="0" Grid.RowSpan="2" >
+                            <DataGrid.Columns>
+                                <DataGridTemplateColumn  >
+                                    <DataGridTemplateColumn.CellTemplate >
+                                        <DataTemplate>
+                                            <Button  Style="{StaticResource AccentedSquareButtonStyle}" Click="UpdateTest_Click">Update</Button>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTextColumn Header="NumTest" Binding="{Binding NumTest}"  />
+                                <DataGridTextColumn Header="IdTrainee" Binding="{Binding IdTrainee}"  />
+                                <DataGridTextColumn Header="IdTester" Binding="{Binding IdTester}"  />
+                                <DataGridTextColumn Header="TesterNote" Binding="{Binding TesterNote}"  />
+                                <DataGridTextColumn Header="City" Binding="{Binding AddressTest.City}"  />
+                                <DataGridTextColumn Header="Street" Binding="{Binding AddressTest.Street}"  />
+                                <DataGridTextColumn Header="Number of building" Binding="{Binding AddressTest.NBuilding}"  />
+                                <DataGridTextColumn Header="Day" Binding="{Binding DayAndHour.DAY}"  />
+                                <DataGridTextColumn Header="Hour" Binding="{Binding DayAndHour.HOUR}"  />
+                                <DataGridTextColumn Header="DateTest" Binding="{Binding DateTest,StringFormat='dd/MM/yyyy' }"  />
+                                <DataGridTextColumn Header="SavingDistance" Binding="{Binding Criterion.SavingDistance}"  />
+                                <DataGridTextColumn Header="ReverseParking" Binding="{Binding Criterion.ReverseParking}"  />
+                                <DataGridTextColumn Header="CheckMirrors" Binding="{Binding Criterion.CheckMirrors}"  />
+                                <DataGridTextColumn Header="Signal" Binding="{Binding Criterion.Signal}"  />
+                                <DataGridTextColumn Header="Speed" Binding="{Binding Criterion.Speed}"  />
+                                <DataGridTextColumn Header="ObedienceSigns" Binding="{Binding Criterion.ObedienceSigns}"  />
+                                <DataGridTextColumn Header="Final Answer" Binding="{Binding Answer}"  />
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </Grid>
+                </TabItem>
+            </TabControl.Items>
+        </TabControl>
+    </Grid>
+</Window>

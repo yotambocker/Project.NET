@@ -1,0 +1,69 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF"
+        xmlns:BE="clr-namespace:BE;assembly=BE" x:Class="PLWPF.AddTestWindow"
+        mc:Ignorable="d"
+        Title="AddTestWindow" Height="450" Width="800" >
+    <Window.Resources>
+        <CollectionViewSource x:Key="testViewSource" d:DesignSource="{d:DesignInstance {x:Type BE:Test}, CreateList=True}"/>
+        <CollectionViewSource x:Key="dayViewSource" d:DesignSource="{d:DesignInstance {x:Type BE:Day}, CreateList=True}"/>
+    </Window.Resources>
+
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <DataGrid x:Name="TesterDataGrid" AutoGenerateColumns="False" IsReadOnly="True" Margin="280.6,10,-280.6,-10" Grid.Column="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="id" Header="ID" Binding="{Binding ID}"  />
+                <DataGridTextColumn Header="first name" Binding="{Binding FName}"  />
+                <DataGridTextColumn Header="last name" Binding="{Binding LName}"  />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Grid x:Name="grid1" DataContext="{StaticResource testViewSource}" HorizontalAlignment="Left" Margin="20,17,0,0" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Content="Date Test:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <DatePicker x:Name="dateTestDatePicker" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" SelectedDate="{Binding DateTest, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center"/>
+            <Label Content="Id Trainee:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="1" VerticalAlignment="Center"/>
+            <TextBox x:Name="idTraineeTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="1" Text="{Binding IdTrainee, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="City:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="2" VerticalAlignment="Center"/>
+            <TextBox x:Name="cityTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="2" Text="{Binding AddressTest.City, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="NBuilding:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="3" VerticalAlignment="Center"/>
+            <TextBox x:Name="nBuildingTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="3" Text="{Binding AddressTest.NBuilding, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="Street:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="4" VerticalAlignment="Center"/>
+            <TextBox x:Name="streetTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="4" Text="{Binding AddressTest.Street, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="DAY:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="5" VerticalAlignment="Center"/>
+            <ComboBox x:Name="dAYComboBox" Grid.Column="1" SelectedItem  ="{Binding DayAndHour.DAY}" HorizontalAlignment="Left" Height="Auto" Margin="3" Grid.Row="5" VerticalAlignment="Center" Width="120"/>
+            <Label Content="HOUR:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="6" VerticalAlignment="Center"/>
+            <ComboBox x:Name="hOURComboBox"  Grid.Column="1"  HorizontalAlignment="Left" Height="Auto" SelectedIndex="{Binding DayAndHour.HOUR}" Margin="3" Grid.Row="6" VerticalAlignment="Center" Width="120"  >
+                <ComboBoxItem Content="9:00" />
+                <ComboBoxItem Content="10:00" />
+                <ComboBoxItem Content="11:00" />
+                <ComboBoxItem Content="12:00" />
+                <ComboBoxItem Content="13:00" />
+                <ComboBoxItem Content="14:00" />
+            </ComboBox>
+        </Grid>
+        <Button x:Name="add" Content="add" Margin="134,246,38.2,119"  Width="55" Height="55"  Style="{DynamicResource MahApps.Metro.Styles.MetroCircleButtonStyle}" Click="add_Click"    />
+        <Button x:Name="update" Content="update" Margin="39,246,138,119"  Width="55" Height="55"  Style="{DynamicResource MahApps.Metro.Styles.MetroCircleButtonStyle}" Click="update_Click"    />
+
+    </Grid>
+</Window>

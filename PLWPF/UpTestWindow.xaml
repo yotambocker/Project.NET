@@ -1,0 +1,100 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF"
+        xmlns:BE="clr-namespace:BE;assembly=BE" x:Class="PLWPF.UpTestWindow"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        mc:Ignorable="d"
+        Title="UpTestWindow" Height="450" Width="400">
+    <Window.Resources>
+        <local:ConvertToBool  x:Key="ToConverter" />
+    </Window.Resources>
+
+    <TabControl>
+        <TabControl.Items>
+            <TabItem Header="information" x:Name="upgrid">
+                <Grid  VerticalAlignment="Top"  HorizontalAlignment="Center">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Label VerticalAlignment="Center" Grid.Row="5" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="Date Test:"/>
+                    <TextBlock x:Name="dateTestDatePicker" VerticalAlignment="Center" Text="{Binding DateTest, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="5" Margin="3" HorizontalAlignment="Left" Grid.Column="1"/>
+
+                    <Label VerticalAlignment="Center" Grid.Row="2" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="Id Tester:"/>
+                    <TextBlock x:Name="idTesterTextBox" Width="120" VerticalAlignment="Center" Text="{Binding IdTester, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="2" Margin="3" Height="23" HorizontalAlignment="Left" Grid.Column="1"/>
+                    <Label VerticalAlignment="Center" Grid.Row="3" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="Id Trainee:"/>
+                    <TextBlock x:Name="idTraineeTextBox" Width="120" VerticalAlignment="Center" Text="{Binding IdTrainee, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="3" Margin="3" Height="23" HorizontalAlignment="Left" Grid.Column="1"/>
+                    <Label VerticalAlignment="Center" Grid.Row="4" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="Num Test:"/>
+                    <TextBlock x:Name="numTestTextBox" Width="120" VerticalAlignment="Center" Text="{Binding NumTest, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="4" Margin="3" Height="23" HorizontalAlignment="Left" Grid.Column="1"/>
+
+                    <Label VerticalAlignment="Center" Grid.Row="6" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="City:"/>
+                    <TextBlock x:Name="cityTextBox" Width="120" VerticalAlignment="Center" Text="{Binding AddressTest.City, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="6" Margin="3" Height="23" HorizontalAlignment="Left" Grid.Column="1"/>
+                    <Label VerticalAlignment="Center" Grid.Row="7" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="NBuilding:"/>
+                    <TextBlock x:Name="nBuildingTextBox" Width="120" VerticalAlignment="Center" Text="{Binding AddressTest.NBuilding, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="7" Margin="3" Height="23" HorizontalAlignment="Left" Grid.Column="1"/>
+                    <Label VerticalAlignment="Center" Grid.Row="8" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="Street:"/>
+                    <TextBlock x:Name="streetTextBox" Width="120" VerticalAlignment="Center" Text="{Binding AddressTest.Street, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="8" Margin="3" Height="23" HorizontalAlignment="Left" Grid.Column="1"/>
+                    <Label VerticalAlignment="Center" Grid.Row="9" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="DAY:"/>
+                    <TextBlock x:Name="dAYComboBox" Width="120" VerticalAlignment="Center" Grid.Row="9" Margin="3" Height="Auto" HorizontalAlignment="Left" Text="{Binding DayAndHour.DAY}" Grid.Column="1"/>
+                    <Label VerticalAlignment="Center" Grid.Row="10" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="HOUR:"/>
+                    <TextBlock x:Name="hOURComboBox" Width="120" VerticalAlignment="Center" Grid.Row="10" Margin="3"  Height="Auto" HorizontalAlignment="Left" Text="{Binding DayAndHour.HOUR}" Grid.Column="1"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="update">
+                <Grid x:Name="infogrid" VerticalAlignment="Top"  HorizontalAlignment="Center">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Label VerticalAlignment="Center" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Content="Criterion" HorizontalAlignment="Center"   />
+                    <Label VerticalAlignment="Center" Grid.Column="0" Grid.Row="1" Content="SavingDistance"   />
+                    <Label VerticalAlignment="Center" Grid.Column="0" Grid.Row="2" Content="ReverseParking" />
+                    <Label VerticalAlignment="Center" Grid.Column="0" Grid.Row="3" Content="CheckMirrors" />
+                    <Label VerticalAlignment="Center" Grid.Column="0" Grid.Row="4" Content="Signal" />
+                    <Label VerticalAlignment="Center" Grid.Column="0" Grid.Row="5" Content="Speed" />
+                    <Label VerticalAlignment="Center" Grid.Column="0" Grid.Row="6" Content="ObedienceSigns" />
+                    <Label VerticalAlignment="Center" Grid.Column="0" Grid.Row="7"   Content="Finel Answer:" FontSize="20" />
+                    <Label VerticalAlignment="Center" Grid.Column="0" Grid.Row="8"   Content="Tester Note:"/>
+
+                    <Controls:ToggleSwitch Grid.Column="1" Grid.Row="1"  OnLabel="Success" OffLabel="Not pass" IsChecked="{Binding Criterion.SavingDistance, Converter={StaticResource ToConverter}  , Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true,ValidatesOnDataErrors =True  }" x:Name="SavingDistance"   />
+                    <Controls:ToggleSwitch Grid.Column="1" Grid.Row="2"  OnLabel="Success" OffLabel="Not pass" IsChecked="{Binding Criterion.ReverseParking,Converter={StaticResource ToConverter}  ,   Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true,ValidatesOnDataErrors =True }" x:Name="ReverseParking"   />
+                    <Controls:ToggleSwitch Grid.Column="1" Grid.Row="3"  OnLabel="Success" OffLabel="Not pass" IsChecked="{Binding Criterion.CheckMirrors,Converter={StaticResource ToConverter}  ,   Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true,ValidatesOnDataErrors =True }"   x:Name="CheckMirrors"   />
+                    <Controls:ToggleSwitch Grid.Column="1" Grid.Row="4"  OnLabel="Success" OffLabel="Not pass" IsChecked="{Binding Criterion.Signal, Converter={StaticResource ToConverter}  ,  Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true,ValidatesOnDataErrors =True }"         x:Name="Signal" />
+                    <Controls:ToggleSwitch Grid.Column="1" Grid.Row="5"  OnLabel="Success" OffLabel="Not pass" IsChecked="{Binding Criterion.Speed, Converter={StaticResource ToConverter}  ,  Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true,ValidatesOnDataErrors =True }"          x:Name="Speed"  />
+                    <Controls:ToggleSwitch Grid.Column="1" Grid.Row="6"  OnLabel="Success" OffLabel="Not pass" IsChecked="{Binding Criterion.ObedienceSigns, Converter={StaticResource ToConverter}  ,  Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true,ValidatesOnDataErrors =True }" x:Name="ObedienceSigns"      />
+
+                    <Controls:ToggleSwitch x:Name="TesterAnswer" Grid.Column="1" Grid.Row="7"  OnLabel="Success" OffLabel="Not pass"  IsChecked="{Binding Testeranswer,Converter={StaticResource ToConverter}  , Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true,ValidatesOnDataErrors =True }" FontSize="20"   />
+                    <TextBox  x:Name="TesterNote" Grid.Column="1" Grid.Row="8" Text="{Binding Testernote,   Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true,ValidatesOnDataErrors =True }" />
+                    <Button Grid.RowSpan="2" Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="9" x:Name="Update" Content="Update"   Width="55" Height="55"  Style="{DynamicResource MahApps.Metro.Styles.MetroCircleButtonStyle}" Click="Update_Click" />
+                </Grid>
+            </TabItem>
+        </TabControl.Items>
+    </TabControl>
+</Window>
