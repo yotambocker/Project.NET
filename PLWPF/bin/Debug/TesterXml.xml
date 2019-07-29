@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<testers>
+  <tester>
+    <ID>311525836</ID>
+    <Phone>050</Phone>
+    <Seniority>15</Seniority>
+    <MaxTest>1</MaxTest>
+    <Distancefromaddres>0</Distancefromaddres>
+    <Tests>0</Tests>
+    <LName>bocker</LName>
+    <FName>yotam</FName>
+    <Gender>Male</Gender>
+    <MyAddress>
+      <City>jerusalem</City>
+      <Street>pisga</Street>
+      <NBuilding>1</NBuilding>
+    </MyAddress>
+    <BDate>17/08/1934 00:00:00</BDate>
+    <CarType>PrivateCar</CarType>
+    <MaxD>1</MaxD>
+    <Password />
+  </tester>
+  <tester>
+    <ID>314699554</ID>
+    <Phone>0504446666</Phone>
+    <Seniority>25</Seniority>
+    <MaxTest>2</MaxTest>
+    <Distancefromaddres>0</Distancefromaddres>
+    <Tests>0</Tests>
+    <LName>cohen</LName>
+    <FName>sason</FName>
+    <Gender>Male</Gender>
+    <MyAddress>
+      <City>jerusalem</City>
+      <Street>pisga</Street>
+      <NBuilding>2</NBuilding>
+    </MyAddress>
+    <BDate>27/08/1934 00:00:00</BDate>
+    <CarType>PrivateCar</CarType>
+    <MaxD>2</MaxD>
+    <Password />
+  </tester>
+</testers>
