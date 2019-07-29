@@ -1,0 +1,13 @@
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\BL\bin\Debug\BL.dll
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\BL\bin\Debug\BL.pdb
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\BL\bin\Debug\BE.dll
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\BL\bin\Debug\DAL.dll
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\BL\bin\Debug\DS.dll
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\BL\bin\Debug\BE.pdb
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\BL\bin\Debug\DAL.pdb
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\BL\bin\Debug\DS.pdb
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\BL\obj\Debug\BL.csprojAssemblyReference.cache
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\BL\obj\Debug\BL.csproj.CopyComplete
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\BL\obj\Debug\BL.dll
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\BL\obj\Debug\BL.pdb

@@ -1,0 +1,6 @@
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\BE\bin\Debug\BE.dll
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\BE\bin\Debug\BE.pdb
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\BE\obj\Debug\BE.csproj.CoreCompileInputs.cache
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\BE\obj\Debug\BE.dll
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\BE\obj\Debug\BE.pdb
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\BE\obj\Debug\BE.csprojAssemblyReference.cache
