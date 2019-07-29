@@ -1,0 +1,11 @@
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\DAL\bin\Release\DAL.dll
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\DAL\bin\Release\DAL.pdb
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\DAL\bin\Release\BE.dll
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\DAL\bin\Release\DS.dll
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\DAL\bin\Release\BE.pdb
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\DAL\bin\Release\DS.pdb
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\DAL\obj\Release\DAL.csprojAssemblyReference.cache
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\DAL\obj\Release\DAL.csproj.CoreCompileInputs.cache
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\DAL\obj\Release\DAL.csproj.CopyComplete
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\DAL\obj\Release\DAL.dll
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\DAL\obj\Release\DAL.pdb

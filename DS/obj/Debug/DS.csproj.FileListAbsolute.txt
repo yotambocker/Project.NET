@@ -1,0 +1,9 @@
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\DS\bin\Debug\DS.dll
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\DS\bin\Debug\DS.pdb
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\DS\bin\Debug\BE.dll
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\DS\bin\Debug\BE.pdb
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\DS\obj\Debug\DS.csprojAssemblyReference.cache
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\DS\obj\Debug\DS.csproj.CoreCompileInputs.cache
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\DS\obj\Debug\DS.csproj.CopyComplete
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\DS\obj\Debug\DS.dll
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\DS\obj\Debug\DS.pdb
