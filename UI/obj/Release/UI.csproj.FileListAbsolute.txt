@@ -1,0 +1,16 @@
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\UI\bin\Release\UI.exe.config
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\UI\bin\Release\UI.exe
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\UI\bin\Release\UI.pdb
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\UI\bin\Release\BE.dll
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\UI\bin\Release\BL.dll
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\UI\bin\Release\DAL.dll
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\UI\bin\Release\DS.dll
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\UI\bin\Release\BE.pdb
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\UI\bin\Release\BL.pdb
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\UI\bin\Release\DAL.pdb
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\UI\bin\Release\DS.pdb
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\UI\obj\Release\UI.csprojAssemblyReference.cache
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\UI\obj\Release\UI.csproj.CoreCompileInputs.cache
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\UI\obj\Release\UI.csproj.CopyComplete
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\UI\obj\Release\UI.exe
+C:\Users\yotam.nehama\Source\Repos\yigal1\csharpproj2\UI\obj\Release\UI.pdb

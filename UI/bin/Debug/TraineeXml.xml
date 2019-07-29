@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<trainees>
+  <trainee>
+    <ID>123456782</ID>
+    <Phone>050</Phone>
+    <LessonNum>40</LessonNum>
+    <School>c</School>
+    <Teacher />
+    <LName>aa</LName>
+    <FName>a</FName>
+    <Gender>Male</Gender>
+    <MyAddress>
+      <City>city</City>
+      <Street>street</Street>
+      <NBuilding>1</NBuilding>
+    </MyAddress>
+    <BDate>1995-06-17T00:00:00</BDate>
+    <CarType>PrivateCar</CarType>
+    <Gear>Automatic</Gear>
+    <LastTest>2000-01-01T00:00:00</LastTest>
+    <HaveGlasses>false</HaveGlasses>
+  </trainee>
+  <trainee>
+    <ID>322675562</ID>
+    <Phone>050</Phone>
+    <LessonNum>40</LessonNum>
+    <School>b</School>
+    <Teacher />
+    <LName>bb</LName>
+    <FName>b</FName>
+    <Gender>Male</Gender>
+    <MyAddress>
+      <City>city</City>
+      <Street>street</Street>
+      <NBuilding>2</NBuilding>
+    </MyAddress>
+    <BDate>1995-06-27T00:00:00</BDate>
+    <CarType>PrivateCar</CarType>
+    <Gear>Automatic</Gear>
+    <LastTest>2000-01-01T00:00:00</LastTest>
+    <HaveGlasses>false</HaveGlasses>
+  </trainee>
+</trainees>

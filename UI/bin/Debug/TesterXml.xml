@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<testers>
+  <tester>
+    <ID>311525836</ID>
+    <Phone>050</Phone>
+    <Seniority>15</Seniority>
+    <MaxTest>14</MaxTest>
+    <Distancefromaddres>0</Distancefromaddres>
+    <Tests>0</Tests>
+    <LName>aa</LName>
+    <FName>a</FName>
+    <Gender>Male</Gender>
+    <MyAddress>
+      <City>city</City>
+      <Street>street</Street>
+      <NBuilding>1</NBuilding>
+    </MyAddress>
+    <BDate>1934-08-17T00:00:00</BDate>
+    <CarType>PrivateCar</CarType>
+    <MaxD>1</MaxD>
+    <Password />
+  </tester>
+  <tester>
+    <ID>314699554</ID>
+    <Phone>050</Phone>
+    <Seniority>25</Seniority>
+    <MaxTest>24</MaxTest>
+    <Distancefromaddres>0</Distancefromaddres>
+    <Tests>0</Tests>
+    <LName>bb</LName>
+    <FName>b</FName>
+    <Gender>Male</Gender>
+    <MyAddress>
+      <City>city</City>
+      <Street>street</Street>
+      <NBuilding>2</NBuilding>
+    </MyAddress>
+    <BDate>1934-08-27T00:00:00</BDate>
+    <CarType>PrivateCar</CarType>
+    <MaxD>2</MaxD>
+    <Password />
+  </tester>
+</testers>
